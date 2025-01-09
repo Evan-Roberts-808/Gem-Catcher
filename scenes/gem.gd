@@ -1,5 +1,6 @@
 extends Area2D
 
+signal on_gem_off_screen
 
 @export var speed: float = 100.0
 
@@ -12,5 +13,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	position.y += speed * delta
 	if position.y > get_viewport_rect().size.y:
+		on_gem_off_screen.emit()
 		set_process(false) #prevents process from being invoked
 		queue_free() #removes from the scene tree when able
