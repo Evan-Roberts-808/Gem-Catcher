@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name Gem
+
 signal on_gem_off_screen
 
 @export var speed: float = 100.0
