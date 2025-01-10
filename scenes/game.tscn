@@ -25,5 +25,19 @@ speed = 500.0
 wait_time = 2.0
 autostart = true
 
-[connection signal="area_entered" from="Paddle" to="Paddle" method="_on_gem_area_entered"]
+[node name="Label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 134.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.967431, 0.489494, 0.781834, 1)
+theme_override_colors/font_shadow_color = Color(0.677071, 0.000393228, 0.688587, 1)
+theme_override_colors/font_outline_color = Color(0.960999, 0.603158, 0.885421, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 48
+text = "0000"
+
+[connection signal="area_entered" from="Paddle" to="." method="_on_paddle_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

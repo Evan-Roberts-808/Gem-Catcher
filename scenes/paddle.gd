@@ -14,7 +14,3 @@ func _process(delta: float) -> void:
 	#elif Input.is_action_pressed("right"):
 		#position.x += speed * delta
 	position.x += delta * speed * Input.get_axis("left", "right")
-
-
-func _on_gem_area_entered(area: Area2D) -> void:
-	print(area)
